@@ -11,20 +11,20 @@ $(document).ready(function() {
     //REFERENZE
 var size = 5;
 var numGenerate = [];
-var second = 5;
+var second = 30;
 
 //GEN NUM CASUALI
 while (size > numGenerate.length) {
     numGenerate.push(Math.floor(Math.random()*100));
 };
-console.log(numGenerate);
+console.log("Numeri generati " + numGenerate);
 
 //ALERT NUMERI GENERATI
 alert('Num gen ' + numGenerate);
 
 //COUNTDOWN 
 var intervallo = setInterval(function(){
-    if (second > 0) {
+    if (second > 1) {
         second--;
         console.log(second);
     } else {
@@ -36,15 +36,31 @@ var intervallo = setInterval(function(){
         var numUtente = [];
 
         //LOOP RICHIESTA NUM UTENTE
-        while (richieste < size) {
+        while (richieste <= size) {
             var utente = parseInt(prompt('Inserisci numero ' + richieste + ' di ' + size));
             numUtente.push(utente);
             richieste++;
         };
         console.log(numUtente);
+        //REFERENZE NUM COMPATIBILI
+var numCompatibili = [];
+var numSbagliati = [];
+
+for (i = 0; i < size; i++) {
+    if (numGenerate.includes(numUtente[i])) {
+        numCompatibili.push(numUtente[i]);
+    } else {
+        numSbagliati.push(numUtente[i]);
+    }
+};
+console.log('Hai indovinato ' + numCompatibili);
+console.log('Hai indovinato ' + numCompatibili.length);
+console.log('Hai sbagliato questi numeri ' + numSbagliati);
         }
 }, 1000);
   
+
+
 
 
 
