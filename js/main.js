@@ -19,8 +19,10 @@ while (size > numGenerate.length) {
 };
 console.log(numGenerate);
 
+//ALERT NUMERI GENERATI
 alert('Num gen ' + numGenerate);
 
+//COUNTDOWN 
 var intervallo = setInterval(function(){
     if (second > 0) {
         second--;
