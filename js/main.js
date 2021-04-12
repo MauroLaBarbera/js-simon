@@ -53,9 +53,9 @@ for (i = 0; i < size; i++) {
         numSbagliati.push(numUtente[i]);
     }
 };
-console.log('Hai indovinato ' + numCompatibili);
-console.log('Hai indovinato ' + numCompatibili.length);
-console.log('Hai sbagliato questi numeri ' + numSbagliati);
+console.log('Hai indovinato il/i numero/i: ' + numCompatibili);
+console.log('Hai indovinato in totale: ' + numCompatibili.length + ' numero/i');
+console.log('Hai sbagliato questo/i numero/i: ' + numSbagliati);
         }
 }, 1000);
   
