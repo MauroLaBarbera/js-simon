@@ -28,10 +28,24 @@ var intervallo = setInterval(function(){
         second--;
         console.log(second);
     } else {
+        //FINE INTERVALLO
         clearInterval(intervallo);
-    }
+
+        //REFERENZE RICHIESTA NUMERI UTENTE
+        var richieste = 1;
+        var numUtente = [];
+
+        //LOOP RICHIESTA NUM UTENTE
+        while (richieste < size) {
+            var utente = parseInt(prompt('Inserisci numero ' + richieste + ' di ' + size));
+            numUtente.push(utente);
+            richieste++;
+        };
+        console.log(numUtente);
+        }
 }, 1000);
   
+
 
 
 
